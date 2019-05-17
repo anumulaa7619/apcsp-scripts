@@ -8,7 +8,7 @@ do
 	nc -zv -w 1 172.19.223.$i port 80
 	
 	
-	var a = hostname 172.19.223.$i
+	var b = hostname 172.19.223.$i
 	
 	echo hostname
 	
