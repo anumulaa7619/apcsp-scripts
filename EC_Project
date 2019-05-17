@@ -1,4 +1,5 @@
 #!/bin/bash
+
 for i in {1..15}
 do
 	ping 172.19.223.$i -w 1 > /dev/null
