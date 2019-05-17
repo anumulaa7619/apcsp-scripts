@@ -13,9 +13,9 @@ do
 	echo hostname
 	
 	
-	<#else
-	<#	echo "RPI0$i is unresponsive"
-	<#fi
+	#else
+	#	echo "RPI0$i is unresponsive"
+	#fi
 done
 
 
@@ -23,15 +23,15 @@ done
 
 
 
-<#for i in {10..20}
-<#do
+#for i in {10..20}
+#do
 
-	<#ping rpi$i -w 1 > /dev/null
-	<#if  [ $? -eq 0 ]; then
-	<#	echo "RPI$i is responsive"
-	<#else
-	<#	echo "RPI$i is unresponsive"
-	<#fi
-<#done
+	#ping rpi$i -w 1 > /dev/null
+	#if  [ $? -eq 0 ]; then
+	#	echo "RPI$i is responsive"
+	#else
+	#	echo "RPI$i is unresponsive"
+	#fi
+#done
 
 echo "done" 
