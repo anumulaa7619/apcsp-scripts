@@ -6,10 +6,9 @@ StartVar=`echo "$IpAddress"` | cut -c 1
 EndVar=${IpAddress##$StartVar*.}
 FinalIpAddress=${IpAddress%$EndVar}
 
-counter=1
-until [ $counter -gt 255 ]
+for i in {1..255};
 do
-	UpdateIP="$FinalIpAddress$counter"
+	UpdateIP="$FinalIpAddress$i"
 	if ping -c 1 -W 1 "$UpdateIP" >/dev/null 2>&1; then
 		echo $UpdateIP : alive
 		host=`host $UpdateIP | cut -d' ' -f5`
@@ -29,5 +28,4 @@ do
 		echo " "
 		fi
 	fi
-((counter++))
 done
